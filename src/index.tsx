@@ -4,7 +4,6 @@ import { HelmetProvider } from "react-helmet-async";
 import { ApolloProvider } from "@apollo/client";
 import App from "./App";
 import client from "./client";
-import { AuthProvider } from "./components/Contexts/AuthContext";
 import { AnalyticsProvider } from "./components/Contexts/AnalyticsContext";
 import env from "./env";
 
@@ -18,11 +17,9 @@ root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <HelmetProvider>
-        <AuthProvider>
-          <AnalyticsProvider GA_MEASUREMENT_ID={env.REACT_APP_GA_TRACKING_ID}>
-            <App />
-          </AnalyticsProvider>
-        </AuthProvider>
+        <AnalyticsProvider GA_MEASUREMENT_ID={env.REACT_APP_GA_TRACKING_ID}>
+          <App />
+        </AnalyticsProvider>
       </HelmetProvider>
     </ApolloProvider>
   </React.StrictMode>
