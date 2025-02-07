@@ -75,7 +75,7 @@ const useBuildReduxStore = (): ReduxStoreResult => {
     if (
       !datacommon?.name ||
       !datacommon?.assets ||
-      !datacommon?.assets["current-version"] ||
+      !datacommon?.assets["path"] ||
       !datacommon.configuration?.pdfConfig
     ) {
       setStatus("error");

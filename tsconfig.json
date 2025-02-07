@@ -24,6 +24,7 @@
   "include": [
     "src",
     "conf",
+    "ctdc",
     ".eslintrc.cjs",
     "types/*.d.ts",
     "public"
