@@ -19,7 +19,8 @@ const DMN = LazyLoader(lazy(() => import("./content/modelNavigator/Controller"))
 
 const DMNWrapper: React.FC = () => {
   const defaultConfig =
-    "https://raw.githubusercontent.com/jonkiky/crdc-data-model-navigator/refs/heads/data/ctdc/";
+     "https://raw.githubusercontent.com/CBIIT/ctdc-data-model-navigator-landing/refs/heads/main/example/CTDC/1.0.0/"
+    // "https://raw.githubusercontent.com/jonkiky/crdc-data-model-navigator/refs/heads/data/ctdc/";
   const config = useQueryConfig(defaultConfig);
 
   return <DMN config={config} />;
