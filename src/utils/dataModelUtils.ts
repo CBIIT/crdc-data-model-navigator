@@ -10,7 +10,7 @@ import { Logger } from "./logger";
  * @throws An error if the manifest cannot be fetched.
  */
 export const fetchManifest = async (DataCommon): Promise<DataModelManifest> => {
-  const response = await fetch(`${DataCommon}/content.json`).catch(() => null);
+  const response = await fetch(`${DataCommon}content.json`).catch(() => null);
   const parsed = await response?.json().catch(() => null);
   if (response && parsed) {
     return parsed;
