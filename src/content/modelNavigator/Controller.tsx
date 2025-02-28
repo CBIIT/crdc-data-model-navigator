@@ -13,8 +13,13 @@ const ModelNavigatorController: React.FC = () => {
 
   const query = useQuery();
   const defaultConfig =
-    "https://raw.githubusercontent.com/jonkiky/crdc-data-model-navigator/refs/heads/data/ctdc";
-  const config = query.get("config") || defaultConfig; // Fallback to defaultConfig if `config` is not present
+    "https://raw.githubusercontent.com/jonkiky/crdc-data-model-navigator/refs/heads/data/ctdc/";
+  let config = query.get("config") || defaultConfig; // Fallback to defaultConfig if `config` is not present
+
+  // Ensure config has a trailing backslash
+  if (!config.endsWith("/")) {
+    config += "/";
+  }
 
   return (
     <DataCommonProvider key={config} DataCommon={config}>

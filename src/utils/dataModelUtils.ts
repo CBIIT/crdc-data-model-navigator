@@ -10,17 +10,11 @@ import { Logger } from "./logger";
  * @throws An error if the manifest cannot be fetched.
  */
 export const fetchManifest = async (DataCommon): Promise<DataModelManifest> => {
-  if (sessionStorage.getItem("manifest")) {
-    return JSON.parse(sessionStorage.getItem("manifest"));
-  }
-
-  const response = await fetch(`${DataCommon}/content.json`).catch(() => null);
+  const response = await fetch(`${DataCommon}content.json`).catch(() => null);
   const parsed = await response?.json().catch(() => null);
   if (response && parsed) {
-    sessionStorage.setItem("manifest", JSON.stringify(parsed));
     return parsed;
   }
-
   throw new Error("Unable to fetch or parse manifest");
 };
 
