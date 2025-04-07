@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/crdc-data-model-navigator/static/js/main.76f2d36b.js",
+    "main.js": "/crdc-data-model-navigator/static/js/main.dd8b006f.js",
     "static/js/419.e46f7c1d.chunk.js": "/crdc-data-model-navigator/static/js/419.e46f7c1d.chunk.js",
     "static/css/119.3d5fd01f.chunk.css": "/crdc-data-model-navigator/static/css/119.3d5fd01f.chunk.css",
     "static/js/119.16500e92.chunk.js": "/crdc-data-model-navigator/static/js/119.16500e92.chunk.js",
@@ -9,7 +9,7 @@
     "static/js/703.5278d873.chunk.js": "/crdc-data-model-navigator/static/js/703.5278d873.chunk.js",
     "static/js/513.26aa0971.chunk.js": "/crdc-data-model-navigator/static/js/513.26aa0971.chunk.js",
     "static/js/317.f806bdf2.chunk.js": "/crdc-data-model-navigator/static/js/317.f806bdf2.chunk.js",
-    "static/js/824.1175aac0.chunk.js": "/crdc-data-model-navigator/static/js/824.1175aac0.chunk.js",
+    "static/js/824.910744e2.chunk.js": "/crdc-data-model-navigator/static/js/824.910744e2.chunk.js",
     "static/media/Model_View.png": "/crdc-data-model-navigator/static/media/Model_View.0dd0b646ad1d106a2557.png",
     "static/media/404.png": "/crdc-data-model-navigator/static/media/404.1e4b1796593b8f966447.png",
     "static/media/Nunito-ExtraLightItalic.ttf": "/crdc-data-model-navigator/static/media/Nunito-ExtraLightItalic.a76c5b7c36bed98e9632.ttf",
@@ -27,10 +27,10 @@
     "static/media/study.svg": "/crdc-data-model-navigator/static/media/study.136eff24243acd6f707704fef153773b.svg",
     "static/media/administrative.svg": "/crdc-data-model-navigator/static/media/administrative.374955cceb33a041d3e91bb68fe89d4e.svg",
     "static/media/clinical_trial.svg": "/crdc-data-model-navigator/static/media/clinical_trial.eb4515c99ea3004579777f503249f9d4.svg",
-    "static/media/icon_download_TSV.svg": "/crdc-data-model-navigator/static/media/icon_download_TSV.c13f0dcb6db0e3b01d7471066d48ed32.svg",
     "static/media/icon_download_PDF.svg": "/crdc-data-model-navigator/static/media/icon_download_PDF.03276c0c8382a1c0082736afb408cc74.svg",
     "static/media/Reset.svg": "/crdc-data-model-navigator/static/media/Reset.c917cc926f236e96348a96d0d88a549f.svg",
     "static/media/lg_administrative.svg": "/crdc-data-model-navigator/static/media/lg_administrative.b45f9143a1c3a747bb3af2fb50aca9c0.svg",
+    "static/media/icon_question_dark.svg": "/crdc-data-model-navigator/static/media/icon_question_dark.2cd7de7175c7d925664005080cf88e8d.svg",
     "index.html": "/crdc-data-model-navigator/index.html",
     "static/media/icon_default.svg": "/crdc-data-model-navigator/static/media/icon_default.a5fd9c634899e9de34b3d7723f790b7c.svg",
     "static/media/lg_case.svg": "/crdc-data-model-navigator/static/media/lg_case.c4109a0b1b22e443a455e9b935c7833d.svg",
@@ -42,10 +42,12 @@
     "static/media/lg_biospecimen.svg": "/crdc-data-model-navigator/static/media/lg_biospecimen.6675b069f58468adec5867cbcd757e83.svg",
     "static/media/key_icon.svg": "/crdc-data-model-navigator/static/media/key_icon.1462c0d511495637760f7616add6b49c.svg",
     "static/media/lg_link.svg": "/crdc-data-model-navigator/static/media/lg_link.bb1d282175e4f0b4ccd863c6d0b40be5.svg",
+    "static/media/icon_download.svg": "/crdc-data-model-navigator/static/media/icon_download.fbe35f324a3d02799fdade6b96d8a309.svg",
+    "static/media/icon_download_dark.svg": "/crdc-data-model-navigator/static/media/icon_download_dark.697eb663626c868ff9aed7c71702c5ac.svg",
     "static/media/lg_relationship_links.svg": "/crdc-data-model-navigator/static/media/lg_relationship_links.f06ef0332377fbf55e434b844b2b5e64.svg",
     "static/media/ZoomIn.svg": "/crdc-data-model-navigator/static/media/ZoomIn.195beab5ac5f6f448e1555b957cf80d7.svg",
     "static/media/ZoomOut.svg": "/crdc-data-model-navigator/static/media/ZoomOut.63846b11032ed157c388680d4fc2a8a9.svg",
-    "main.76f2d36b.js.map": "/crdc-data-model-navigator/static/js/main.76f2d36b.js.map",
+    "main.dd8b006f.js.map": "/crdc-data-model-navigator/static/js/main.dd8b006f.js.map",
     "419.e46f7c1d.chunk.js.map": "/crdc-data-model-navigator/static/js/419.e46f7c1d.chunk.js.map",
     "119.3d5fd01f.chunk.css.map": "/crdc-data-model-navigator/static/css/119.3d5fd01f.chunk.css.map",
     "119.16500e92.chunk.js.map": "/crdc-data-model-navigator/static/js/119.16500e92.chunk.js.map",
@@ -54,9 +56,9 @@
     "703.5278d873.chunk.js.map": "/crdc-data-model-navigator/static/js/703.5278d873.chunk.js.map",
     "513.26aa0971.chunk.js.map": "/crdc-data-model-navigator/static/js/513.26aa0971.chunk.js.map",
     "317.f806bdf2.chunk.js.map": "/crdc-data-model-navigator/static/js/317.f806bdf2.chunk.js.map",
-    "824.1175aac0.chunk.js.map": "/crdc-data-model-navigator/static/js/824.1175aac0.chunk.js.map"
+    "824.910744e2.chunk.js.map": "/crdc-data-model-navigator/static/js/824.910744e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.76f2d36b.js"
+    "static/js/main.dd8b006f.js"
   ]
 }
