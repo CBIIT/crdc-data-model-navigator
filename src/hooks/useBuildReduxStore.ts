@@ -6,21 +6,13 @@ import {
   versionInfo,
   getModelExploreData,
 } from "data-model-navigator";
-import { useLazyQuery } from "@apollo/client";
-import { defaultTo } from "lodash";
-import {
-  baseConfiguration,
-  defaultReadMeTitle,
-  graphViewConfig as graphConfig,
-} from "../config/ModelNavigator";
+import { baseConfiguration, defaultReadMeTitle, graphViewConfig } from "../config/ModelNavigator";
 import {
   buildAssetUrls,
   buildBaseFilterContainers,
   buildFilterOptionsList,
-  updateEnums,
   Logger,
 } from "../utils";
-import { RETRIEVE_CDEs, RetrieveCDEsInput, RetrieveCDEsResp } from "../graphql";
 
 export type ReduxStoreStatus = "waiting" | "loading" | "error" | "success";
 
@@ -52,13 +44,13 @@ const useBuildReduxStore = (): ReduxStoreResult => {
   const [status, setStatus] = useState<ReduxStoreStatus>("waiting");
   const [store, setStore] = useState<Store>(makeStore());
 
-  const [retrieveCDEs, { error: retrieveCDEsError }] = useLazyQuery<
-    RetrieveCDEsResp,
-    RetrieveCDEsInput
-  >(RETRIEVE_CDEs, {
-    context: { clientName: "backend" },
-    fetchPolicy: "cache-and-network",
-  });
+  // const [retrieveCDEs, { error: retrieveCDEsError }] = useLazyQuery<
+  //   RetrieveCDEsResp,
+  //   RetrieveCDEsInput
+  // >(RETRIEVE_CDEs, {
+  //   context: { clientName: "backend" },
+  //   fetchPolicy: "cache-and-network",
+  // });
 
   /**
    * Rebuilds the store from scratch
@@ -87,10 +79,6 @@ const useBuildReduxStore = (): ReduxStoreResult => {
     }
 
     setStatus("loading");
-    const graphViewConfig = {
-      ...graphConfig,
-      ...datacommon.configuration.graphViewConfig,
-    };
 
     const assets = buildAssetUrls(datacommon);
     const response = await getModelExploreData(...assets.model_files)?.catch((e) => {
@@ -102,30 +90,30 @@ const useBuildReduxStore = (): ReduxStoreResult => {
       return;
     }
 
-    let dictionary;
-    const { cdeMap, data: dataList } = response;
+    const { /* cdeMap, */ data: dataList } = response;
+    const dictionary = dataList;
 
-    if (cdeMap) {
-      const cdeInfo: CDEInfo[] = Array.from(response.cdeMap.values());
-      try {
-        const CDEs = await retrieveCDEs({
-          variables: {
-            cdeInfo: cdeInfo.map(({ CDECode, CDEVersion }) => ({ CDECode, CDEVersion })),
-          },
-        });
+    // if (cdeMap) {
+    //   const cdeInfo: CDEInfo[] = Array.from(response.cdeMap.values());
+    //   try {
+    //     const CDEs = await retrieveCDEs({
+    //       variables: {
+    //         cdeInfo: cdeInfo.map(({ CDECode, CDEVersion }) => ({ CDECode, CDEVersion })),
+    //       },
+    //     });
 
-        if (retrieveCDEsError) {
-          dictionary = updateEnums(cdeMap, dataList, [], true);
-        } else {
-          const retrievedCDEs = defaultTo(CDEs.data.retrieveCDEs, []);
-          dictionary = updateEnums(cdeMap, dataList, retrievedCDEs);
-        }
-      } catch (error) {
-        dictionary = updateEnums(cdeMap, dataList, [], true);
-      }
-    } else {
-      dictionary = dataList;
-    }
+    //     if (retrieveCDEsError) {
+    //       dictionary = updateEnums(cdeMap, dataList, [], true);
+    //     } else {
+    //       const retrievedCDEs = defaultTo(CDEs.data.retrieveCDEs, []);
+    //       dictionary = updateEnums(cdeMap, dataList, retrievedCDEs);
+    //     }
+    //   } catch (error) {
+    //     dictionary = updateEnums(cdeMap, dataList, [], true);
+    //   }
+    // } else {
+    // dictionary = dataList;
+    // }
 
     store.dispatch({ type: "RECEIVE_VERSION_INFO", data: response.version });
 
