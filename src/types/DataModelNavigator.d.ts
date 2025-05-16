@@ -43,6 +43,12 @@ type ModelNavigatorConfig = {
   facetFilterSectionVariables: {
     [key: string]: unknown;
   };
+  graphViewConfig?: {
+    canvas?: {
+      fit?: unknown;
+      nodeTree?: unknown;
+    }
+  };
 };
 
 /**

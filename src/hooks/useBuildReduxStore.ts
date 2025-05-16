@@ -8,7 +8,11 @@ import {
 } from "data-model-navigator";
 import { useLazyQuery } from "@apollo/client";
 import { defaultTo } from "lodash";
-import { baseConfiguration, defaultReadMeTitle, graphViewConfig } from "../config/ModelNavigator";
+import {
+  baseConfiguration,
+  defaultReadMeTitle,
+  graphViewConfig as graphConfig,
+} from "../config/ModelNavigator";
 import {
   buildAssetUrls,
   buildBaseFilterContainers,
@@ -83,6 +87,10 @@ const useBuildReduxStore = (): ReduxStoreResult => {
     }
 
     setStatus("loading");
+    const graphViewConfig = {
+      ...graphConfig,
+      ...datacommon.configuration.graphViewConfig,
+    };
 
     const assets = buildAssetUrls(datacommon);
     const response = await getModelExploreData(...assets.model_files)?.catch((e) => {

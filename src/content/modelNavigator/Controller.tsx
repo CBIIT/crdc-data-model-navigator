@@ -12,8 +12,10 @@ const ModelNavigatorController: React.FC = () => {
   const useQuery = () => new URLSearchParams(useLocation().search);
 
   const query = useQuery();
+  // const defaultConfig =
+  //  "https://raw.githubusercontent.com/jonkiky/crdc-data-model-navigator/refs/heads/data/ctdc/";
   const defaultConfig =
-    "https://raw.githubusercontent.com/jonkiky/crdc-data-model-navigator/refs/heads/data/ctdc/";
+    "https://raw.githubusercontent.com/rana22/c3dc-model/refs/heads/patch-1/model-desc/";
   let config = query.get("config") || defaultConfig; // Fallback to defaultConfig if `config` is not present
 
   // Ensure config has a trailing backslash

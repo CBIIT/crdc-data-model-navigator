@@ -23,7 +23,17 @@ export const baseConfiguration = {
  * Base configuration for the graph view
  */
 export const graphViewConfig = {
-  legend: {},
+  legend: {
+    legendExpand: {
+      position: "absolute",
+      top: "300px",
+      backgroundColor: "#494949",
+      border: "2px solid #5486AF",
+      borderTopLeftRadius: "10px 10px",
+      borderBottomLeftRadius: "10px 10px",
+      paddingBottom: "15px",
+    },
+  },
   canvas: {
     fit: {
       x: 0,
@@ -32,6 +42,15 @@ export const graphViewConfig = {
       minZoom: 0.7,
       maxZoom: 2,
     },
+    nodeTree: [
+      ["program"],
+      ["project"],
+      ["study"],
+      ["principal_investigator", "subject", "image_collection", "associated_link"],
+      ["non_targeted_therapy", "surgery", "radiotherapy", "subject_status", "targeted_therapy"],
+      ["demographic", "diagnosis", "specimen"],
+      ["exposure", "data_file"],
+    ],
   },
 };
 
