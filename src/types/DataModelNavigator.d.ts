@@ -47,7 +47,7 @@ type ModelNavigatorConfig = {
     canvas?: {
       fit?: unknown;
       nodeTree?: unknown;
-    }
+    };
   };
 };
 
