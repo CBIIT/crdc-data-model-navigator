@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/crdc-data-model-navigator/static/js/main.dd8b006f.js",
+    "main.js": "/crdc-data-model-navigator/static/js/main.dc7aec0d.js",
     "static/js/419.e46f7c1d.chunk.js": "/crdc-data-model-navigator/static/js/419.e46f7c1d.chunk.js",
-    "static/css/119.3d5fd01f.chunk.css": "/crdc-data-model-navigator/static/css/119.3d5fd01f.chunk.css",
-    "static/js/119.16500e92.chunk.js": "/crdc-data-model-navigator/static/js/119.16500e92.chunk.js",
+    "static/css/731.af1bf0d9.chunk.css": "/crdc-data-model-navigator/static/css/731.af1bf0d9.chunk.css",
+    "static/js/731.8574bfd6.chunk.js": "/crdc-data-model-navigator/static/js/731.8574bfd6.chunk.js",
     "static/js/734.5d989a95.chunk.js": "/crdc-data-model-navigator/static/js/734.5d989a95.chunk.js",
     "static/js/787.1598ce61.chunk.js": "/crdc-data-model-navigator/static/js/787.1598ce61.chunk.js",
     "static/js/703.5278d873.chunk.js": "/crdc-data-model-navigator/static/js/703.5278d873.chunk.js",
     "static/js/513.26aa0971.chunk.js": "/crdc-data-model-navigator/static/js/513.26aa0971.chunk.js",
     "static/js/317.f806bdf2.chunk.js": "/crdc-data-model-navigator/static/js/317.f806bdf2.chunk.js",
-    "static/js/824.910744e2.chunk.js": "/crdc-data-model-navigator/static/js/824.910744e2.chunk.js",
+    "static/js/492.00fc3075.chunk.js": "/crdc-data-model-navigator/static/js/492.00fc3075.chunk.js",
     "static/media/Model_View.png": "/crdc-data-model-navigator/static/media/Model_View.0dd0b646ad1d106a2557.png",
     "static/media/404.png": "/crdc-data-model-navigator/static/media/404.1e4b1796593b8f966447.png",
     "static/media/Nunito-ExtraLightItalic.ttf": "/crdc-data-model-navigator/static/media/Nunito-ExtraLightItalic.a76c5b7c36bed98e9632.ttf",
@@ -31,7 +31,6 @@
     "static/media/Reset.svg": "/crdc-data-model-navigator/static/media/Reset.c917cc926f236e96348a96d0d88a549f.svg",
     "static/media/lg_administrative.svg": "/crdc-data-model-navigator/static/media/lg_administrative.b45f9143a1c3a747bb3af2fb50aca9c0.svg",
     "static/media/icon_question_dark.svg": "/crdc-data-model-navigator/static/media/icon_question_dark.2cd7de7175c7d925664005080cf88e8d.svg",
-    "index.html": "/crdc-data-model-navigator/index.html",
     "static/media/icon_default.svg": "/crdc-data-model-navigator/static/media/icon_default.a5fd9c634899e9de34b3d7723f790b7c.svg",
     "static/media/lg_case.svg": "/crdc-data-model-navigator/static/media/lg_case.c4109a0b1b22e443a455e9b935c7833d.svg",
     "static/media/lg_clinical_trial.svg": "/crdc-data-model-navigator/static/media/lg_clinical_trial.6d7b4e5464e61289d36611afa039c3ee.svg",
@@ -39,6 +38,7 @@
     "static/media/lg_analysis.svg": "/crdc-data-model-navigator/static/media/lg_analysis.3772493c07dee1e9bdf08eb5784964a3.svg",
     "static/media/lg_study.svg": "/crdc-data-model-navigator/static/media/lg_study.4ff6bd75ecc28e348ecec9d8df825101.svg",
     "static/media/lg_data_file.svg": "/crdc-data-model-navigator/static/media/lg_data_file.0e83dd8b933015671faeadcca8c4bc2c.svg",
+    "index.html": "/crdc-data-model-navigator/index.html",
     "static/media/lg_biospecimen.svg": "/crdc-data-model-navigator/static/media/lg_biospecimen.6675b069f58468adec5867cbcd757e83.svg",
     "static/media/key_icon.svg": "/crdc-data-model-navigator/static/media/key_icon.1462c0d511495637760f7616add6b49c.svg",
     "static/media/lg_link.svg": "/crdc-data-model-navigator/static/media/lg_link.bb1d282175e4f0b4ccd863c6d0b40be5.svg",
@@ -47,18 +47,18 @@
     "static/media/lg_relationship_links.svg": "/crdc-data-model-navigator/static/media/lg_relationship_links.f06ef0332377fbf55e434b844b2b5e64.svg",
     "static/media/ZoomIn.svg": "/crdc-data-model-navigator/static/media/ZoomIn.195beab5ac5f6f448e1555b957cf80d7.svg",
     "static/media/ZoomOut.svg": "/crdc-data-model-navigator/static/media/ZoomOut.63846b11032ed157c388680d4fc2a8a9.svg",
-    "main.dd8b006f.js.map": "/crdc-data-model-navigator/static/js/main.dd8b006f.js.map",
+    "main.dc7aec0d.js.map": "/crdc-data-model-navigator/static/js/main.dc7aec0d.js.map",
     "419.e46f7c1d.chunk.js.map": "/crdc-data-model-navigator/static/js/419.e46f7c1d.chunk.js.map",
-    "119.3d5fd01f.chunk.css.map": "/crdc-data-model-navigator/static/css/119.3d5fd01f.chunk.css.map",
-    "119.16500e92.chunk.js.map": "/crdc-data-model-navigator/static/js/119.16500e92.chunk.js.map",
+    "731.af1bf0d9.chunk.css.map": "/crdc-data-model-navigator/static/css/731.af1bf0d9.chunk.css.map",
+    "731.8574bfd6.chunk.js.map": "/crdc-data-model-navigator/static/js/731.8574bfd6.chunk.js.map",
     "734.5d989a95.chunk.js.map": "/crdc-data-model-navigator/static/js/734.5d989a95.chunk.js.map",
     "787.1598ce61.chunk.js.map": "/crdc-data-model-navigator/static/js/787.1598ce61.chunk.js.map",
     "703.5278d873.chunk.js.map": "/crdc-data-model-navigator/static/js/703.5278d873.chunk.js.map",
     "513.26aa0971.chunk.js.map": "/crdc-data-model-navigator/static/js/513.26aa0971.chunk.js.map",
     "317.f806bdf2.chunk.js.map": "/crdc-data-model-navigator/static/js/317.f806bdf2.chunk.js.map",
-    "824.910744e2.chunk.js.map": "/crdc-data-model-navigator/static/js/824.910744e2.chunk.js.map"
+    "492.00fc3075.chunk.js.map": "/crdc-data-model-navigator/static/js/492.00fc3075.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.dd8b006f.js"
+    "static/js/main.dc7aec0d.js"
   ]
 }
