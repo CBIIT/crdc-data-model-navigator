@@ -23,7 +23,6 @@ export const baseConfiguration = {
  * Base configuration for the graph view
  */
 export const graphViewConfig = {
-  legend: {},
   canvas: {
     fit: {
       x: 0,

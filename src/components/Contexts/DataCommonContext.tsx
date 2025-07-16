@@ -1,5 +1,4 @@
 import React, { FC, createContext, useContext, useEffect, useState } from "react";
-import { DataCommons } from "../../config/DataCommons";
 import { fetchManifest } from "../../utils";
 
 type LoadingState = {
@@ -86,7 +85,7 @@ export const DataCommonProvider: FC<ProviderProps> = ({ DataCommon, children }: 
   const [state, setState] = useState<ContextState>(initialState);
 
   useEffect(() => {
-    if (!DataCommon || DataCommons.find((dc) => dc.name === DataCommon) === undefined) {
+    if (!DataCommon) {
       setState({
         status: Status.ERROR,
         DataCommon: null,
@@ -98,8 +97,8 @@ export const DataCommonProvider: FC<ProviderProps> = ({ DataCommon, children }: 
     setState(initialState);
 
     (async () => {
-      const manifest = await fetchManifest().catch(() => null);
-      if (!manifest?.[DataCommon]) {
+      const manifest = await fetchManifest(DataCommon).catch(() => null);
+      if (!manifest) {
         setState({
           status: Status.ERROR,
           DataCommon: null,
@@ -107,12 +106,12 @@ export const DataCommonProvider: FC<ProviderProps> = ({ DataCommon, children }: 
         });
         return;
       }
-
+      manifest["path"] = DataCommon;
       setState({
         status: Status.LOADED,
         DataCommon: {
-          ...DataCommons.find((dc) => dc.name === DataCommon),
-          assets: { ...manifest[DataCommon] },
+          ...manifest["ui_settings"],
+          assets: { ...manifest },
         },
         error: null,
       });

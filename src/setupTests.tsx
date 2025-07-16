@@ -63,26 +63,6 @@ global.DataTransfer = class DataTransfer {
 } as typeof DataTransfer;
 
 /**
- * Mocks the Recharts ResponsiveContainer component for testing
- *
- * @note This solves the missing ResizeObserver error in Jest
- * @see Recharts documentation: https://recharts.org/en-US/guide
- */
-const MockResponsiveContainer = (props) => <div {...props} />;
-jest.mock("recharts", () => ({
-  ...jest.requireActual("recharts"),
-  ResponsiveContainer: MockResponsiveContainer,
-}));
-
-/**
- * Mocks the react-markdown package for testing
- * as Jest does not support ESM modules by default
- */
-jest.mock("react-markdown", () => ({ children }: { children: string }) => (
-  <div data-testid="react-markdown-mock">{children}</div>
-));
-
-/**
  * Prevents the console.error and console.warn from silently failing
  * in tests by throwing an error when called
  */

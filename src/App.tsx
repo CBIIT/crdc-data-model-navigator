@@ -1,8 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { SnackbarProvider } from "notistack";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import routeConfig from "./router";
 import StyledNotistackAlerts from "./components/StyledNotistackAlerts";
 import theme from "./theme";
@@ -23,10 +21,8 @@ const App = () => (
       hideIconVariant
       preventDuplicate
     >
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <CssBaseline />
-        <RouterProvider router={router} />
-      </LocalizationProvider>
+      <CssBaseline />
+      <RouterProvider router={router} />
     </SnackbarProvider>
   </ThemeProvider>
 );

@@ -1,6 +1,4 @@
 import { defaultTo } from "lodash";
-import { MODEL_FILE_REPO } from "../config/DataCommons";
-import env from "../env";
 import { RetrieveCDEsResp } from "../graphql";
 import GenericModelLogo from "../assets/modelNavigator/genericLogo.png";
 import { Logger } from "./logger";
@@ -11,20 +9,12 @@ import { Logger } from "./logger";
  * @returns The parsed content manifest.
  * @throws An error if the manifest cannot be fetched.
  */
-export const fetchManifest = async (): Promise<DataModelManifest> => {
-  if (sessionStorage.getItem("manifest")) {
-    return JSON.parse(sessionStorage.getItem("manifest"));
-  }
-
-  const response = await fetch(
-    `${MODEL_FILE_REPO}${env.REACT_APP_DEV_TIER || "prod"}/cache/content.json`
-  ).catch(() => null);
+export const fetchManifest = async (DataCommon): Promise<DataModelManifest> => {
+  const response = await fetch(`${DataCommon}content.json`).catch(() => null);
   const parsed = await response?.json().catch(() => null);
   if (response && parsed) {
-    sessionStorage.setItem("manifest", JSON.stringify(parsed));
     return parsed;
   }
-
   throw new Error("Unable to fetch or parse manifest");
 };
 
@@ -35,27 +25,15 @@ export const fetchManifest = async (): Promise<DataModelManifest> => {
  * @returns ModelAssetUrls
  */
 export const buildAssetUrls = (dc: DataCommon): ModelAssetUrls => ({
-  model_files:
-    dc?.assets?.["model-files"]?.map(
-      (file) =>
-        `${MODEL_FILE_REPO}${env.REACT_APP_DEV_TIER || "prod"}/cache/${dc?.name}/${dc?.assets?.[
-          "current-version"
-        ]}/${file}`
-    ) || [],
+  model_files: dc?.assets?.["model-files"]?.map((file) => `${dc?.assets["path"]}/${file}`) || [],
   readme: dc?.assets?.["readme-file"]
-    ? `${MODEL_FILE_REPO}${env.REACT_APP_DEV_TIER || "prod"}/cache/${dc?.name}/${dc?.assets?.[
-        "current-version"
-      ]}/${dc?.assets?.["readme-file"]}`
+    ? `${dc?.assets["path"]}/${dc?.assets?.["readme-file"]}`
     : null,
   loading_file: dc?.assets?.["loading-file"]
-    ? `${MODEL_FILE_REPO}${env.REACT_APP_DEV_TIER || "prod"}/cache/${dc?.name}/${dc?.assets?.[
-        "current-version"
-      ]}/${dc?.assets?.["loading-file"]}`
+    ? `${dc?.assets["path"]}/${dc?.assets?.["loading-file"]}`
     : null,
   navigator_icon: dc?.assets?.["model-navigator-logo"]
-    ? `${MODEL_FILE_REPO}${env.REACT_APP_DEV_TIER || "prod"}/cache/${dc?.name}/${dc?.assets?.[
-        "current-version"
-      ]}/${dc?.assets?.["model-navigator-logo"]}`
+    ? `${dc?.assets["path"]}/${dc?.assets?.["model-navigator-logo"]}`
     : GenericModelLogo,
 });
 
