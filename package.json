@@ -20,7 +20,6 @@
     "jest-axe": "^8.0.0",
     "jest-fail-on-console": "^3.3.0",
     "lodash": "^4.17.21",
-    "notistack": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
