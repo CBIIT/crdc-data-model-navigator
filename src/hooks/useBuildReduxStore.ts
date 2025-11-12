@@ -183,7 +183,7 @@ const useBuildReduxStore = (): ReduxStoreResult => {
     if (datacommon?.configuration?.iconMap) {
       store.dispatch({
         type: "RECEIVE_ICON_MAP",
-        data: datacommon?.assets?.["model-navigator-config"]?.iconMap,
+        data: datacommon?.configuration?.iconMap,
       });
     }
 
