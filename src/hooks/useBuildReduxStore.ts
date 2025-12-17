@@ -4,7 +4,10 @@ import {
   ddgraph,
   moduleReducers as submission,
   versionInfo,
+  changelogInfo,
+  iconMapInfo,
   getModelExploreData,
+  getChangelog,
 } from "data-model-navigator";
 import {
   baseConfiguration,
@@ -27,7 +30,7 @@ export type ReduxStoreResult = [
 ];
 
 const makeStore = (): Store => {
-  const reducers = { ddgraph, versionInfo, submission };
+  const reducers = { ddgraph, versionInfo, submission, changelogInfo, iconMapInfo };
   const newStore = createStore(combineReducers(reducers));
 
   // @ts-ignore
@@ -89,17 +92,22 @@ const useBuildReduxStore = (): ReduxStoreResult => {
     };
 
     const assets = buildAssetUrls(datacommon);
+
     const response = await getModelExploreData(...assets.model_files)?.catch((e) => {
       Logger.error(e);
       return null;
     });
+    const changelogMD = await getChangelog(assets?.changelog)?.catch((e) => {
+      Logger.error(e);
+      return null;
+    });
+
     if (!response?.data || !response?.version) {
       setStatus("error");
       return;
     }
 
-    const { /* cdeMap, */ data: dataList } = response;
-    const dictionary = dataList;
+    const { data: dictionary } = response;
 
     // if (cdeMap) {
     //   const cdeInfo: CDEInfo[] = Array.from(response.cdeMap.values());
@@ -161,6 +169,23 @@ const useBuildReduxStore = (): ReduxStoreResult => {
         graphViewConfig,
       },
     });
+
+    if (changelogMD) {
+      store.dispatch({
+        type: "RECEIVE_CHANGELOG_INFO",
+        data: {
+          changelogMD,
+          changelogTabName: "Version History",
+        },
+      });
+    }
+
+    if (datacommon?.configuration?.iconMap) {
+      store.dispatch({
+        type: "RECEIVE_ICON_MAP",
+        data: datacommon?.configuration?.iconMap,
+      });
+    }
 
     // MVP-2 M2 NOTE: This resets the search history to prevent the data models
     // from overlapping on searches. A future improvement would be to isolate

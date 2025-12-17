@@ -18,19 +18,6 @@ Object.defineProperty(global, "crypto", {
 });
 
 /**
- * Mocks the enqueueSnackbar function from notistack for testing
- *
- * @note You must RESET all mocks after each test to avoid unexpected behavior
- * @example expect(global.mockEnqueue).toHaveBeenCalledWith('message', { variant: 'error' });
- * @see notistack documentation: https://notistack.com/getting-started
- */
-global.mockEnqueue = jest.fn();
-jest.mock("notistack", () => ({
-  ...jest.requireActual("notistack"),
-  useSnackbar: () => ({ enqueueSnackbar: global.mockEnqueue }),
-}));
-
-/**
  * Mocks the DataTransfer class for testing as it is not available in JSDOM
  *
  * @note This only implements the underlying data structure and `files()` method
