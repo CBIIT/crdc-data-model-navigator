@@ -73,6 +73,7 @@ my-organization/repository-xyz
     "name": "Mock MDF",
     "configuration": {
       "pageTitle": "Mock MDF Data Model",
+      "readMeDownload": false,
       "pdfConfig": {
         "fileType": "pdf",
         "prefix": "mock_",

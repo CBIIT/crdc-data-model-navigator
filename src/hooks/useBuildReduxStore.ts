@@ -159,7 +159,7 @@ const useBuildReduxStore = (): ReduxStoreResult => {
         readMeConfig: {
           readMeUrl: assets.readme,
           readMeTitle: datacommon.configuration?.readMeTitle || defaultReadMeTitle,
-          allowDownload: false,
+          allowDownload: datacommon.configuration?.readMeDownload || false,
         },
         pdfDownloadConfig: datacommon.configuration.pdfConfig,
         loadingExampleConfig: {
