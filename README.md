@@ -6,7 +6,7 @@ This project provides a standalone version of the Data Model Navigator (DMN) pac
 
 |Tier|URL|Release Version|Core Version|
 |:-|:-|:-|:-|
-|DEV|https://dp2mdhy99qjlv.cloudfront.net/|1.2.0|v1.10.0|
+|DEV|https://dp2mdhy99qjlv.cloudfront.net/|1.2.0|v1.11.0|
 |PROD|https://d1bxc1yd643e0n.cloudfront.net/|1.1.0|v1.8.1|
 
 ## Installation
