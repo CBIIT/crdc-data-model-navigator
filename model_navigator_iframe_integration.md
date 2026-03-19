@@ -73,6 +73,7 @@ my-organization/repository-xyz
     "name": "Mock MDF",
     "configuration": {
       "pageTitle": "Mock MDF Data Model",
+      "readMeDownload": false,
       "pdfConfig": {
         "fileType": "pdf",
         "prefix": "mock_",
@@ -81,7 +82,8 @@ my-organization/repository-xyz
         "iconSrc": "https://pdf-header-logo-here/x.png",
         "footnote": "Example Footer Note",
         "landscape": true,
-        "enabled": true
+        "enabled": true,
+        "useTimestampInFilename": true
       }
     }
   }
@@ -92,13 +94,13 @@ my-organization/repository-xyz
 
 ## Embedding the Iframe
 
-**Base URL:**  
+**Base DEV URL:**  
 ```
-https://cbiit.github.io/crdc-data-model-navigator
+https://dp2mdhy99qjlv.cloudfront.net/
 ```
 Append `config` URL parameter, e.g.:  
 ```
-https://cbiit.github.io/crdc-data-model-navigator/?config=https://raw.githubusercontent.com/CBIIT/your-repository
+https://dp2mdhy99qjlv.cloudfront.net?config=https://raw.githubusercontent.com/CBIIT/your-repository
 ```
 
 ### Required Sandbox Attributes

@@ -16,6 +16,10 @@ type ModelNavigatorConfig = {
    * @default "Understanding the Data Model"
    */
   readMeTitle?: string;
+  /**
+   * Whether to show the README download button in the README modal popup
+   */
+  readMeDownload?: boolean;
   pdfConfig?: {
     [key: string]: unknown;
     /**
